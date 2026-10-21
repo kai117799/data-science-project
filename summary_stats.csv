@@ -1,0 +1,4 @@
+species,n,bill_length_mm,bill_depth_mm,flipper_length_mm,body_mass_g
+Adelie,151,38.8,18.4,190.0,3700.0
+Chinstrap,68,49.6,18.4,196.0,3700.0
+Gentoo,123,47.3,15.0,216.0,5000.0
