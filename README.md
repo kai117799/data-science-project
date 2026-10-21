@@ -69,8 +69,8 @@ can go before a formal classifier is needed.
 ## Limitation
 
 This is an observational analysis of 342 birds from three islands, with
-unequal group sizes (151 Adelie, 68 Chinstrap, 123 Gentoo). The nearest-
-centroid score describes separation **within this sample**; it is not a
+unequal group sizes (151 Adelie, 68 Chinstrap, 123 Gentoo). The
+nearest-centroid score describes separation **within this sample**; it is not a
 validated identification model. The analysis also ignores sex and island,
 both of which are associated with size, and the two dropped rows mean the
 sample is slightly incomplete. Extending the work with a held-out test set
