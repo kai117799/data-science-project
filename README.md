@@ -66,16 +66,37 @@ can go before a formal classifier is needed.
    **r = 0.87**, and the positive slope holds within each species, so
    flipper length is a useful proxy when a scale is unavailable.
 
-## Limitation
+## Limitations
 
-This is an observational analysis of 342 birds from three islands, with
-unequal group sizes (151 Adelie, 68 Chinstrap, 123 Gentoo). The
-nearest-centroid score describes separation **within this sample**; it is not a
-validated identification model. The analysis also ignores sex and island,
-both of which are associated with size, and the two dropped rows mean the
-sample is slightly incomplete. Extending the work with a held-out test set
-and a model that controls for sex and island would give a fairer estimate
-of how well these measurements generalise to new colonies.
+This is a small observational analysis, so the results are descriptive
+rather than causal. The main limitations are:
+
+1. **No independent test set.** The 93.6% figure is a leave-one-out estimate
+   computed on the same 342 birds. It is not an out-of-sample
+   generalisation score and should not be read as expected field accuracy.
+2. **Class imbalance.** The sample contains 151 Adelie, 68 Chinstrap and 123
+   Gentoo. Overall accuracy is dominated by the two larger classes, and the
+   result for Chinstrap is the least stable.
+3. **Only two features.** The classifier uses bill length and bill depth
+   only. Sex, island and collection year are not controlled, even though all
+   three are associated with body size and bill shape.
+4. **Listwise deletion.** Two rows with missing measurements are dropped.
+   This may introduce a small selection bias and slightly change the summary
+   statistics.
+5. **Limited sampling frame.** The data come from three islands and were
+   collected in 2007-2009. Results should not be extrapolated to other
+   colonies, species or periods.
+6. **Linear baseline.** Nearest centroid assumes roughly comparable
+   covariance and linear decision boundaries, so it cannot represent
+   non-linear or multimodal class structure.
+7. **Static figures.** The plots show point estimates and covariance
+   ellipses but no confidence intervals or formal uncertainty bands.
+   Apparent separation should therefore not be read as statistical
+   significance.
+
+Extending the work with a held-out test set and a model that controls for
+sex and island would give a fairer estimate of how well these measurements
+generalise to new colonies.
 
 ## Figures
 
